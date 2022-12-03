@@ -1,11 +1,9 @@
-import { Welcome } from '../components/Welcome/Welcome';
-import { ColorSchemeToggle } from '../components/ColorSchemeToggle/ColorSchemeToggle';
+import { withSsrUser } from 'util/auth';
 
 export default function HomePage() {
   return (
-    <>
-      <Welcome />
-      <ColorSchemeToggle />
-    </>
+    <div>home</div>
   );
 }
+
+export const getServerSideProps = withSsrUser;
